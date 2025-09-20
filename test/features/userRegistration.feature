@@ -1,4 +1,4 @@
-Feature: Invalid Registration
+Feature: User Registration
 
 Scenario: Unsuccessful registration for an account on studentbeans.com
   Given I am on the studentbeans homepage

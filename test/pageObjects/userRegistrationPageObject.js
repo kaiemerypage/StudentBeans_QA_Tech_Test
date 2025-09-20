@@ -1,6 +1,6 @@
 import ParentPageObject from './parentPageObject'
 
-class InvalidRegistrationPageObject extends ParentPageObject {
+class UserRegistrationPageObject extends ParentPageObject {
 
   get registerLink () {
     return $('a=Register')
@@ -59,4 +59,4 @@ class InvalidRegistrationPageObject extends ParentPageObject {
   }
 }
 
-module.exports = InvalidRegistrationPageObject
+module.exports = UserRegistrationPageObject

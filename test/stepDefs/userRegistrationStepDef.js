@@ -1,7 +1,7 @@
 const { Given, When, Then } = require('@cucumber/cucumber')
-const InvalidRegistrationPageObject = require('../pageObjects/invalidRegistrationPageObject')
+const UserRegistrationPageObject = require('../pageObjects/userRegistrationPageObject')
 
-const invalidRegistrationPageObject = new InvalidRegistrationPageObject()
+const invalidRegistrationPageObject = new UserRegistrationPageObject()
 
 Given('I open the register page', async () => {
   await invalidRegistrationPageObject.openRegisterPage()
