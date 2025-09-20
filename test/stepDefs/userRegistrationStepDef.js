@@ -1,23 +1,23 @@
 const { Given, When, Then } = require('@cucumber/cucumber')
 const UserRegistrationPageObject = require('../pageObjects/userRegistrationPageObject')
 
-const invalidRegistrationPageObject = new UserRegistrationPageObject()
+const userRegistrationPageObject = new UserRegistrationPageObject()
 
 Given('I open the register page', async () => {
-  await invalidRegistrationPageObject.openRegisterPage()
-  await invalidRegistrationPageObject.verifyRegisterPage()
+  await userRegistrationPageObject.openRegisterPage()
+  await userRegistrationPageObject.verifyRegisterPage()
 })
 
 When('I enter {string} in the email field', async (email) => {
-  await invalidRegistrationPageObject.enterEmailText(email)
+  await userRegistrationPageObject.enterEmailText(email)
 })
 
 When('I enter {string} in the password field', async (password) => {
-  await invalidRegistrationPageObject.enterPasswordText(password)
+  await userRegistrationPageObject.enterPasswordText(password)
 
 })
 
 Then('I should see the correct error messages', async () => {
-  await invalidRegistrationPageObject.verifyEmailError()
-  await invalidRegistrationPageObject.verifyPasswordError()
+  await userRegistrationPageObject.verifyEmailError()
+  await userRegistrationPageObject.verifyPasswordError()
 })
