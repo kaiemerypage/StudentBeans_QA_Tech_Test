@@ -4,8 +4,7 @@ const TrendingNowPageObject = require('../pageObjects/trendingNowPageObject')
 const trendingNowPageObject = new TrendingNowPageObject()
 
 When('I navigate to the Trending Now offers page', async () => {
-  await trendingNowPageObject.acceptCookies()
-  await trendingNowPageObject.clickTrendingNowLink()
+  await trendingNowPageObject.openTrendingNowPage()
   await trendingNowPageObject.verifyTrendingNowPage()
 })
 

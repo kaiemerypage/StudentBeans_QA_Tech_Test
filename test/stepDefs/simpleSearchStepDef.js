@@ -6,10 +6,10 @@ const simpleSearchPageObject = new SimpleSearchPageObject()
 Given('I am on the studentbeans homepage', async () => {
   await simpleSearchPageObject.goToHomePage()
   await simpleSearchPageObject.verifyHomePage()
+  await simpleSearchPageObject.acceptCookies()
 })
 
 Given('I open the search bar', async () => {
-  await simpleSearchPageObject.acceptCookies()
   await simpleSearchPageObject.openSearchBar()
 })
 

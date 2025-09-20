@@ -2,10 +2,6 @@ import ParentPageObject from './parentPageObject'
 
 class TrendingNowPageObject extends ParentPageObject {
 
-  get acceptCookiesButton () {
-    return $('button=Accept All Cookies')
-  }
-
   get trendingNowLink () {
     return $('a=Trending Now')
   }
@@ -14,11 +10,7 @@ class TrendingNowPageObject extends ParentPageObject {
     return $('article[itemprop="offers"]:nth-child(6) a')
   }
 
-  async acceptCookies () {
-    await this.acceptCookiesButton.click()
-  }
-
-  async clickTrendingNowLink () {
+  async openTrendingNowPage () {
     await this.trendingNowLink.click()
   }
 

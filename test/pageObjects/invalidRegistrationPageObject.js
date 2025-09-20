@@ -2,10 +2,6 @@ import ParentPageObject from './parentPageObject'
 
 class InvalidRegistrationPageObject extends ParentPageObject {
 
-  get acceptCookiesButton () {
-    return $('button=Accept All Cookies')
-  }
-
   get registerLink () {
     return $('a=Register')
   }
@@ -16,10 +12,6 @@ class InvalidRegistrationPageObject extends ParentPageObject {
 
   get passwordInput () {
     return $('#password')
-  }
-
-  async acceptCookies () {
-    await this.acceptCookiesButton.click()
   }
 
   async openRegisterPage () {

@@ -4,7 +4,6 @@ const InvalidRegistrationPageObject = require('../pageObjects/invalidRegistratio
 const invalidRegistrationPageObject = new InvalidRegistrationPageObject()
 
 Given('I open the register page', async () => {
-  await invalidRegistrationPageObject.acceptCookies()
   await invalidRegistrationPageObject.openRegisterPage()
   await invalidRegistrationPageObject.verifyRegisterPage()
 })
