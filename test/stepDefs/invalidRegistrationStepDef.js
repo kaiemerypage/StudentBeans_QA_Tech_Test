@@ -8,12 +8,12 @@ Given('I open the register page', async () => {
   await invalidRegistrationPageObject.verifyRegisterPage()
 })
 
-When('I enter an invalid email address', async () => {
-  await invalidRegistrationPageObject.enterEmailText()
+When('I enter {string} in the email field', async (email) => {
+  await invalidRegistrationPageObject.enterEmailText(email)
 })
 
-When('I enter a password under 8 characters', async () => {
-  await invalidRegistrationPageObject.enterPasswordText()
+When('I enter {string} in the password field', async (password) => {
+  await invalidRegistrationPageObject.enterPasswordText(password)
 
 })
 

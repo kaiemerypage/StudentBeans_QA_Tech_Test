@@ -8,6 +8,6 @@ When('I navigate to the Trending Now offers page', async () => {
   await trendingNowPageObject.verifyTrendingNowPage()
 })
 
-Then('I should open the 6th discount within the Trending Now offers list', async () => {
-  await trendingNowPageObject.openSixthDiscount()
+Then('I should open the {int}st/nd/rd/th discount within the Trending Now offers list', async (n) => {
+  await trendingNowPageObject.openNthDiscount(n)
 })

@@ -10,20 +10,16 @@ class SimpleSearchPageObject extends ParentPageObject {
     return $('input[data-testid="search-input"]')
   }
 
-  get fourthSearchListing () {
-    return $('a[data-testid="search-result-offer"]:nth-child(4)')
-  }
-
   async openSearchBar () {
     await this.searchBarButton.click()
   }
 
-  async enterSearchText () {
-    await this.searchBarInput.addValue('Samsung')
+  async enterSearchText (searchQuery) {
+    await this.searchBarInput.addValue(searchQuery)
   }
 
-  async selectFourthSearchListing () {
-    await this.fourthSearchListing.click()
+  async selectNthSearchListing (n, searchQuery) {
+    await $(`a[data-testid="search-result-offer"]:nth-child(${n})`).$(`p=${searchQuery}`).click()
   }
 }
 

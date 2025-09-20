@@ -13,10 +13,10 @@ Given('I open the search bar', async () => {
   await simpleSearchPageObject.openSearchBar()
 })
 
-When('I enter "Samsung"', async () => {
-  await simpleSearchPageObject.enterSearchText()
+When('I enter {string}', async (searchQuery) => {
+  await simpleSearchPageObject.enterSearchText(searchQuery)
 })
 
-Then('I should select the 4th "Samsung" search listing', async () => {
-  await simpleSearchPageObject.selectFourthSearchListing()
+Then('I should select the {int}st/nd/rd/th {string} search listing', async (n, searchQuery) => {
+  await simpleSearchPageObject.selectNthSearchListing(n, searchQuery)
 })

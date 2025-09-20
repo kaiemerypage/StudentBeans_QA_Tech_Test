@@ -6,10 +6,6 @@ class TrendingNowPageObject extends ParentPageObject {
     return $('a=Trending Now')
   }
 
-  get sixthTrendingDiscount () {
-    return $('article[itemprop="offers"]:nth-child(6) a')
-  }
-
   async openTrendingNowPage () {
     await this.trendingNowLink.click()
   }
@@ -18,8 +14,8 @@ class TrendingNowPageObject extends ParentPageObject {
     await this.isElementEqualToExpected($('h1=The latest and best student discounts'), 'The latest and best student discounts')
   }
 
-  async openSixthDiscount () {
-    await this.sixthTrendingDiscount.click()
+  async openNthDiscount (n) {
+    await $(`article[itemprop="offers"]:nth-child(${n}) a`).click()
   }
 }
 
